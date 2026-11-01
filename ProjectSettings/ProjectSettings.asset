@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: BuildBasic2D
+  companyName: Maxjoy Games
+  productName: Basic Cube 2D
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -166,7 +166,9 @@ PlayerSettings:
   androidMaxAspectRatio: 2.4
   androidMinAspectRatio: 1
   applicationIdentifier:
-    Standalone: com.DefaultCompany.2D-URP
+    Android: com.maxjoygames.basiccube2d
+    Standalone: com.maxjoygames.basiccube2d
+    iPhone: com.maxjoygames.basiccube2d
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -506,7 +508,13 @@ PlayerSettings:
   m_BuildTargetGroupLightmapSettings: []
   m_BuildTargetGroupLoadStoreDebugModeSettings: []
   m_BuildTargetNormalMapEncoding: []
-  m_BuildTargetDefaultTextureCompressionFormat: []
+  m_BuildTargetDefaultTextureCompressionFormat:
+  - serializedVersion: 3
+    m_BuildTarget: Android
+    m_Formats: 01000000
+  - serializedVersion: 3
+    m_BuildTarget: iOS
+    m_Formats: 03000000
   playModeTestRunnerEnabled: 0
   runPlayModeTestAsEditModeTest: 0
   actionOnDotNetUnhandledException: 1
@@ -869,7 +877,7 @@ PlayerSettings:
   qnxGraphicConfPath: 
   apiCompatibilityLevel: 6
   captureStartupLogs: {}
-  activeInputHandler: 1
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: 03eea759-8aff-4b35-974c-7efc4ff64b07
   framebufferDepthMemorylessMode: 0

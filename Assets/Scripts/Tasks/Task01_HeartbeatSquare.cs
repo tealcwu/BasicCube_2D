@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Task01_HeartbeatSquare : MonoBehaviour
+public class Task01_HeartbeatSquare : MonoBehaviour, ITeachingTask
 {
     [Header("教学对比开关")]
     [Tooltip("开启：使用带有 Lerp 弹性回弹与颜色瞬态的商业手感；关闭：新手直接缩放无过渡")]
@@ -13,6 +13,18 @@ public class Task01_HeartbeatSquare : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Vector3 originalScale;
     private Vector3 targetScale;
+
+    public string TaskTitle => "关卡1：心跳方块（按键三态即时反馈）";
+
+    public bool UseCorrectApproach
+    {
+        get => useCorrectApproach;
+        set => useCorrectApproach = value;
+    }
+
+    public string InCorrectModeDescription => "瞬时粗暴缩放，僵硬无弹性";
+
+    public string CorrectModeDescription => "瞬发脉冲 + Lerp 平滑衰减回弹";   
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
